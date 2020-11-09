@@ -1,7 +1,9 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
+#include "CSVprocessor/csvprocessor.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,8 +22,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    void processCSV( QString str_fileName, QString str_toSearch );
-    QStringList processLine( QString str_line, QString str_toSearch );
-    void processVector( QVector<QStringList> vec_temp, QString str_toFind );
+    CSVprocessor csvProc;
 };
 #endif // MAINWINDOW_H
